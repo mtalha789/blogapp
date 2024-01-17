@@ -24,6 +24,7 @@ export default function Signup({
             if (user) {
                 const userData = await authService.getCurrentUser();
                 if (userData) {
+                    console.log(userData);
                     dispatch(login(userData))
                     navigate('/')
                 }

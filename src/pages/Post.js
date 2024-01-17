@@ -35,30 +35,35 @@ export default function Post() {
   return post ? (
     <div className="py-8">
         <Container>
-            <div className='w-full flex justify-center mb-4 relative border rounded-xl p-2'>
-                <img
-                src={service.getFilePreview(post.image)}
-                alt={post.title}
-                />
+            <div className='w-full flex mb-4 relative border rounded-xl p-2'>
+                <div className="w-[60vw]">
+                    <img
+                    src={service.getFilePreview(post.image)}
+                    alt={post.title}
+                    />
+                </div>
                 {isAurthur && 
-                    <div className="absolute top-6 rigth-6">
+                    <div className="flex flex-col absolute top-6 right-6">
                         <Link to={`/edit-post/${post.$id}`}>
-                            <Button bgColor='bg-green-500' className='mr-3'>
+                            <Button bgColor='bg-green-500' className='mr-3 mb-1 w-[7vw]'>
                                 Edit
                             </Button>
                         </Link>
-                        <Button onClick={()=>deletePost()} bgColor='bg-green-500'>
+                        <Button onClick={()=>deletePost()} bgColor='bg-green-500 w-[7vw]'>
                             Delete
                         </Button>
                         <button ></button>
                     </div>
                 }
-                <div className="w-full mb-6">
-                    <h1 className="text-2xl font-bold">{post.title}</h1>
+                <div className='p-3 w-[20vw]'>
+                    <div className="w-full mb-3">
+                        <h1 className="text-2xl font-bold">{post.title}</h1>
+                    </div>
+                    <div className="browser-css">
+                        {Parse(post.content)}
+                    </div>
                 </div>
-                <div className="browser-css">
-                    {Parse(post.content)}
-                </div>
+                
             </div>
         </Container>
     </div>
