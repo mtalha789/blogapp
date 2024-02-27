@@ -17,7 +17,7 @@ export default function Home() {
             <Container>
                 <div className="flex flex-wrap">
                     {posts.map((post)=>(
-                        <div key={post.$id} className="p-2 w-1/4 hover:scale-110">
+                        <div key={post.$id} className="p-2 w-1/3 ">
                             <PostCard {...post} />
                         </div>
                     ))}    

@@ -8,7 +8,7 @@ function PostCard({$id,title,image,content}) {
 
   return (
     <Link to={`/post/${$id}`}>
-        <div className='w-full bg-gray-100 rounded-xl p-4'>
+        <div className='w-full bg-slate-300 rounded-xl p-4 mx-3 hover:bg-slate-600 hover:text-violet-200'>
             <div className='w-full justify-center mb-4'>
                 <img src={appwriteService.getFilePreview(image)} alt={title} />
             </div>
