@@ -38,7 +38,7 @@ export default function Signup({
     <div className='flex items-center justify-center'>
         <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
             <div className="mb-2 flex justify-center">
-                    <span className="inline-block w-full max-w-[100px]">
+                    <span className="bg-slate-900 text-center inline-block w-full">
                         <Logo width="100%" />
                     </span>
             </div>
@@ -82,7 +82,7 @@ export default function Signup({
                         required:true,
                     })}
                     />
-                    <Button type='submit' className='w-full'>
+                    <Button type='submit' bgColor='bg-slate-900' className='w-full'>
                         Create Account
                     </Button>
                 </div>
